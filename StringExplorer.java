@@ -21,24 +21,6 @@ public class StringExplorer
 		System.out.println ("After toLowerCase(), sample = " + sample);
 		
 		//  Try other methods here:
-		
-		//  indexOf when the substring does not occur 
-		int notFoundPsn = sample.indexOf ("slow");
-		System.out.println ("sample.indexOf(\"slow\") = " + notFoundPsn);
-		
-		//  indexOf, starting at position 0, 10, and 35 
-		position = sample.indexOf("he");
-		System.out.println ("sample.indexOf(\"he\") = " + position);
-		
-		position = sample.indexOf("he", 10);
-		System.out.println ("sample.indexOf(\"he\", 10) = " + position);
-		
-		position = sample.indexOf("he", 35);
-		System.out.println ("sample.indexOf(\"he\", 35) = " + position);
-		
-
-		
-		
 
 	}
 
