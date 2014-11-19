@@ -17,7 +17,7 @@ public class Magpie3
 	 */
 	public String getGreeting()
 	{
-		return "Hello, let's talk.";
+		return "Hello, let's talk about chat bots...";
 	}
 
 	/**
