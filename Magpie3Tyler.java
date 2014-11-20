@@ -8,8 +8,7 @@
  * @author Laurie White
  * @version April 2012
  */
-public class Magpie3
-{
+public class Magpie3Tyler {
 	/**
 	 * Get a default greeting
 	 * 
@@ -30,20 +29,43 @@ public class Magpie3
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.length() == 0)
+		if (statement.trim().length() == 0)
 		{
 			response = "Say something, please.";
 		}
-		else if (findKeyword(statement, "no") >= 0)
+		//else if (findKeyword(statement, "no") >= 0)
+		//{
+		//	response = "Why so negative?";
+		//}
+		//else if (findKeyword(statement, "mother") >= 0
+		//		|| findKeyword(statement, "father") >= 0
+		//		|| findKeyword(statement, "sister") >= 0
+		//		|| findKeyword(statement, "brother") >= 0)
+		//{
+			//response = "Tell me more about your family.";
+		//}
+		else if (findKeyword(statement, "hello") >=0
+				 || findKeyword(statement, "hi") >= 0 ) 
 		{
-			response = "Why so negative?";
+			response = "Greetings human";
 		}
-		else if (findKeyword(statement, "mother") >= 0
-				|| findKeyword(statement, "father") >= 0
-				|| findKeyword(statement, "sister") >= 0
-				|| findKeyword(statement, "brother") >= 0)
+		else if (findKeyword(statement, "goodbye") >= 0
+				 || findKeyword(statement, "bye") >= 0 ) 
 		{
-			response = "Tell me more about your family.";
+			response = "Finally!";	
+		}
+		else if (findKeyword(statement, "bored") >= 0 ) 
+		{
+			response = "I will entertain you";
+		}
+		else if (findKeyword(statement, "dog") >= 0
+				 || findKeyword(statement, "cat") >= 0 ) 
+		{
+			response = "Tell me more about your pets";		 	
+		}
+		else if (findKeyword(statement, "Mr. Eipp") >= 0 ) 
+		{
+			response = "He is awsome with computers";
 		}
 		else
 		{
@@ -144,7 +166,7 @@ public class Magpie3
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();
 		int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -164,6 +186,11 @@ public class Magpie3
 		else if (whichResponse == 3)
 		{
 			response = "You don't say.";
+		}
+		else if (whichResponse == 4) {
+			response = "No kidding!";
+		} else if (whichResponse == 5) {
+			response = "That's nice";
 		}
 
 		return response;

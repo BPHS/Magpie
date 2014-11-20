@@ -5,8 +5,7 @@ import java.util.Scanner;
  * @author Laurie White
  * @version April 2012
  */
-public class MagpieRunner3
-{
+public class MagpieRunner3Tyler{
 
 	/**
 	 * Create a Magpie, give it user input, and print its replies.
