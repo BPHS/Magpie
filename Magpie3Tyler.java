@@ -14,7 +14,7 @@ public class Magpie3Tyler {
 	 * 
 	 * @return a greeting
 	 */
-	public String getGreeting()
+	public String getGreeting1()
 	{
 		return "Hello, let's talk.";
 	}
@@ -26,50 +26,50 @@ public class Magpie3Tyler {
 	 *            the user statement
 	 * @return a response based on the rules given
 	 */
-	public String getResponse(String statement)
+	public String getResponse1(String statement)
 	{
 		String response = "";
 		if (statement.trim().length() == 0)
 		{
 			response = "Say something, please.";
 		}
-		//else if (findKeyword(statement, "no") >= 0)
-		//{
-		//	response = "Why so negative?";
-		//}
-		//else if (findKeyword(statement, "mother") >= 0
-		//		|| findKeyword(statement, "father") >= 0
-		//		|| findKeyword(statement, "sister") >= 0
-		//		|| findKeyword(statement, "brother") >= 0)
-		//{
-			//response = "Tell me more about your family.";
-		//}
-		else if (findKeyword(statement, "hello") >=0
-				 || findKeyword(statement, "hi") >= 0 ) 
+		else if (findKeyword1(statement, "no") >= 0)
+		{
+			response = "Why so negative?";
+		}
+		else if (findKeyword1(statement, "mother") >= 0
+				|| findKeyword1(statement, "father") >= 0
+				|| findKeyword1(statement, "sister") >= 0
+				|| findKeyword1(statement, "brother") >= 0)
+		{
+			response = "Tell me more about your family.";
+		}
+		else if (findKeyword1(statement, "hello") >=0
+				 || findKeyword1(statement, "hi") >= 0 ) 
 		{
 			response = "Greetings human";
 		}
-		else if (findKeyword(statement, "goodbye") >= 0
-				 || findKeyword(statement, "bye") >= 0 ) 
+		else if (findKeyword1(statement, "goodbye") >= 0
+				 || findKeyword1(statement, "bye") >= 0 ) 
 		{
 			response = "Finally!";	
 		}
-		else if (findKeyword(statement, "bored") >= 0 ) 
+		else if (findKeyword1(statement, "bored") >= 0 ) 
 		{
 			response = "I will entertain you";
 		}
-		else if (findKeyword(statement, "dog") >= 0
-				 || findKeyword(statement, "cat") >= 0 ) 
+		else if (findKeyword1(statement, "dog") >= 0
+				 || findKeyword1(statement, "cat") >= 0 ) 
 		{
 			response = "Tell me more about your pets";		 	
 		}
-		else if (findKeyword(statement, "Mr. Eipp") >= 0 ) 
+		else if (findKeyword1(statement, "Mr. Eipp") >= 0 ) 
 		{
 			response = "He is awsome with computers";
 		}
 		else
 		{
-			response = getRandomResponse();
+			response = getRandomResponse1();
 		}
 		return response;
 	}
@@ -90,7 +90,7 @@ public class Magpie3Tyler {
 	 * @return the index of the first occurrence of goal in
 	 *         statement or -1 if it's not found
 	 */
-	private int findKeyword(String statement, String goal,
+	private int findKeyword1(String statement, String goal,
 			int startPos)
 	{
 		String phrase = statement.trim();
@@ -154,9 +154,9 @@ public class Magpie3Tyler {
 	 * @return the index of the first occurrence of goal in
 	 *         statement or -1 if it's not found
 	 */
-	private int findKeyword(String statement, String goal)
+	private int findKeyword1(String statement, String goal)
 	{
-		return findKeyword(statement, goal, 0);
+		return findKeyword1(statement, goal, 0);
 	}
 
 	/**
@@ -164,7 +164,7 @@ public class Magpie3Tyler {
 	 * 
 	 * @return a non-committal string
 	 */
-	private String getRandomResponse()
+	private String getRandomResponse1()
 	{
 		final int NUMBER_OF_RESPONSES = 6;
 		double r = Math.random();

@@ -12,15 +12,15 @@ public class MagpieRunner3Tyler{
 	 */
 	public static void main(String[] args)
 	{
-		Magpie3 maggie = new Magpie3();
+		Magpie3Tyler maggie = new Magpie3Tyler();
 		
-		System.out.println (maggie.getGreeting());
+		System.out.println (maggie.getGreeting1());
 		Scanner in = new Scanner (System.in);
 		String statement = in.nextLine();
 		
 		while (!statement.equals("Bye"))
 		{
-			System.out.println (maggie.getResponse(statement));
+			System.out.println (maggie.getResponse1(statement));
 			statement = in.nextLine();
 		}
 	}
